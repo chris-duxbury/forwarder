@@ -11,7 +11,7 @@ app.get("/api", (req, res) => {
     res.send("Hello World!");
 });
 
-app.post("/api/emails", (req, res) => {
+app.post("/emails", (req, res) => {
     let config = {
         service: 'gmail',
         auth: {
