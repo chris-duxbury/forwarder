@@ -7,7 +7,7 @@ const port = process.env.PORT || 3000;
 
 app.use(express.json());
 
-app.get("/api", (req, res) => {
+app.get("/", (req, res) => {
     res.send("Hello World!");
 });
 
@@ -41,8 +41,8 @@ app.post("/emails", (req, res) => {
     });
 });
 
-// app.listen(port, () => {
-//     console.log(`Server listening on port ${port}`);
-// });
+app.listen(port, () => {
+    console.log(`Server listening on port ${port}`);
+});
 
 module.exports = app;
