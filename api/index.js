@@ -12,6 +12,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/emails", (req, res) => {
+    // configure gmail service
     let config = {
         service: 'gmail',
         auth: {
@@ -21,6 +22,7 @@ app.post("/emails", (req, res) => {
     };
     let transporter = nodemailer.createTransport(config);
 
+    // forward request values to email
     let message = {
         from: 'duxcrispy@gmail.com',
         to: req.body.to,
